@@ -3,10 +3,10 @@
 
 using namespace std;
 
-/************************************ToREF***********************************************/
+/************************************Inverse***********************************************/
 
 
-class ToREF
+class Inverse
 {
 protected:
     int n, m;
@@ -28,7 +28,7 @@ public:
 
 
 
-class ToRREF : public ToREF
+class ToRREF : public Inverse
 {
 public:
     void makeAbovePivoteZero(pair<int, int>);
@@ -46,10 +46,10 @@ int main()
     return 0;
 }
 
-/************************************Defining Function of ToREF*****************************/
+/************************************Defining Function of Inverse*****************************/
 
 
-void ToREF :: setMatrix()
+void Inverse :: setMatrix()
 {
     cout << "Enter size of square matrix : ";
     cin >> n;
@@ -72,7 +72,7 @@ void ToREF :: setMatrix()
 }
 
 
-void ToREF :: findNextPivote()
+void Inverse :: findNextPivote()
 {
     cout << "Find next pivote" << endl;
     int x = pivote.size();
@@ -135,7 +135,7 @@ void ToREF :: findNextPivote()
     }
 }
 
-void ToREF :: takePivoteRowAbove(pair<int, int> p)
+void Inverse :: takePivoteRowAbove(pair<int, int> p)
 {
     cout << "Take pivote row above" << endl << endl;
     int rowNo1 = pivote.size() - 1;
@@ -160,7 +160,7 @@ void ToREF :: takePivoteRowAbove(pair<int, int> p)
     display();
 }
 
-void ToREF :: makeBelowPivoteZero(pair<int, int> p)
+void Inverse :: makeBelowPivoteZero(pair<int, int> p)
 {
     cout << "Make elements below pivote zero" << endl << endl;
     float a = matrix[p.first][p.second];
@@ -185,7 +185,7 @@ void ToREF :: makeBelowPivoteZero(pair<int, int> p)
     display();
 }
 
-void ToREF :: display()
+void Inverse :: display()
 {
     cout << endl;
     for(int i = 0; i < n; i++)
@@ -212,7 +212,7 @@ void ToREF :: display()
     cout << endl << endl;
 }
 
-void ToREF :: makeREF()
+void Inverse :: makeREF()
 {
     cout << endl <<"Convert to REF" << endl;
 
