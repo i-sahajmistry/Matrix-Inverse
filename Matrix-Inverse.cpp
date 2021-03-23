@@ -253,5 +253,5 @@ void ToRREF :: makeRREF()
     {
         makeAbovePivoteZero(pivote[i]);
     }
-    cout << "****RREF Matrix****" << endl;
+    cout << "****RREF | Inverse****" << endl;
 }
